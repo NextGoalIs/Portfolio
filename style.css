@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style-type: none;
+}
+
+body{
+    color: white;
+    background-color:dimgrey
+}
+
+.navbar{
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar__logo{
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+.favicon{
+    padding: 8px;
+    width: 30px;
+    height: 30px;
+}
+
+.navbar__menu{
+    display: flex;
+    align-items: center;
+}
+
+.navbar__menu li {
+    padding-left: 32px;
+}
