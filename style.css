@@ -38,3 +38,18 @@ body{
 .navbar__menu li {
     padding-left: 32px;
 }
+
+.Home{
+    padding: 16px;
+    text-align: center;
+}
+
+.Home h1 {
+    padding: 16px;
+}
+
+#Home__myPic {
+    width: 350px;
+    height: 500px;
+    border-radius: 50%;
+}
