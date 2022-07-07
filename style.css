@@ -1,5 +1,7 @@
 :root {
   --point-color: #32c259;
+  --background-color-basic:#DCE2F0;
+  --color-basic: #50586C;
 
   --padding-basic: 24px;
   --border-radius-basic: 8px;
@@ -199,4 +201,21 @@ align-items: center;
 .skill__value{
   height: 3px;
   background-color: lightsalmon;
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color-basic);
+  color: var(--color-basic);
+}
+
+.contact *{
+  padding: var(--padding-basic) 0 calc(var(--padding-basic) / 2);
+}
+
+.contact__links a {
+  color: var(--color-basic);
 }
