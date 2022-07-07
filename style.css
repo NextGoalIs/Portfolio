@@ -1,3 +1,7 @@
+:root {
+  --point-color: #32c259;
+}
+
 * {
   font-family: "Open Sans", sans-serif;
   margin: 0;
@@ -8,20 +12,18 @@ ul {
   list-style-type: none;
 }
 
-body {
-  color: white;
-  background-color: dimgrey;
-}
-
 .navbar {
   padding: 24px;
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid black;
 }
 
-.navbar__logo {
+.navbar__logo a {
   display: flex;
   align-items: center;
+  text-decoration: none;
+  color: var(--point-color);
   font-size: 24px;
 }
 
@@ -40,16 +42,16 @@ body {
   padding-left: 32px;
 }
 
-.Home {
+.home {
   padding: 16px;
   text-align: center;
 }
 
-.Home h1 {
+.home h1 {
   padding: 16px;
 }
 
-#Home__myPic {
+#home__myPic {
   width: 350px;
   height: 500px;
   border-radius: 50%;
