@@ -104,7 +104,7 @@ ul {
   width: 260px;
   height: 260px;
   padding: calc(var(--padding-basic) * 2);
-  border: 1px solid black;
+  border: 1px solid lightgray;
   border-radius: 50%;
 }
 
