@@ -20,16 +20,29 @@ body {
   cursor: default;
 }
 
+section:nth-child(odd){
+  background-color: var(--background-color-basic);
+  color: var(--color-basic);
+}
+
+section:nth-child(even){
+  background-color: var(--color-basic);
+  color: var(--background-color-basic);
+}
+
 ul {
   list-style-type: none;
 }
 
 .navbar {
+  position: sticky;
+  top: 0;
+  background-color: whitesmoke;
   padding: var(--padding-basic);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--color-basic);
 }
 
 .navbar__logo a {
@@ -52,7 +65,7 @@ ul {
 .navbar__menu li {
   padding: calc(var(--padding-basic) / 2) var(--padding-basic);
   cursor: pointer;
-  border: 1px solid white;
+  border: 1px solid whitesmoke;
   border-radius: var(--border-radius-basic);
 }
 
@@ -172,7 +185,8 @@ ul {
   width: 100%;
   padding: var(--padding-basic) calc(var(--padding-basic) * 16);
   justify-content: space-between;
-  background-color: lightgray;
+  background-color: var(--color-basic);
+  color: var(--background-color-basic);
 }
 
 .skillset__left{
