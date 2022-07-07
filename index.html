@@ -1,65 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <link rel="icon" href="imgs/favicon.png" type="image/png">
-    <meta name="author" content="PARK JIN KYO">
-    <script src="https://kit.fontawesome.com/37fa6445ae.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imgs/favicon.png" type="image/png" />
+    <meta name="author" content="PARK JIN KYO" />
+    <script
+      src="https://kit.fontawesome.com/37fa6445ae.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <header class="navbar">
-        <div class="navbar__logo">
-            <a href="#">
-                <img src="imgs/favicon.png" alt="favicon" class="favicon">
-                <span>PARK.J.K</span>
-            </a>
-        </div>
-        <ul class="navbar__menu">
-            <li>Home</li>
-            <li>About</li>
-            <li>Skills</li>
-        </ul>
+      <div class="navbar__logo">
+        <a href="#">
+          <img src="imgs/favicon.png" alt="favicon" class="favicon" />
+          <span>PARK.J.K</span>
+        </a>
+      </div>
+      <ul class="navbar__menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Skills</li>
+      </ul>
     </header>
     <section class="home">
-        <img src="imgs/myPic.jpg" alt="myPicture" id="home__myPic">
-        <h1>박진교</h1>
-        <h3>신입 프론트엔드 개발자</h2>
+      <img src="imgs/myPic.jpg" alt="myPicture" id="home__myPic" />
+      <h1>박진교</h1>
+      <h3>신입 프론트엔드 개발자</h3>
     </section>
     <section class="About">
-        <h1>About me</h1>
-        <p>패러그래프</p>
-        <div class="stack">
-            <div>
-                <i class="fa-solid fa-display fa-10x"></i>
-                <h3>Front-end</h3>
-                <p>사용 가능한 스택 : HTML, CSS, JavaScript, TypeScript, React</p>
-                <p>공부중인 스택 : NextJS, Emotion</p>
-            </div>
-            <div>
-                <i class="fa-solid fa-server fa-10x"></i>
-                <h3>Back-end</h3>
-                <p>사용 가능한 스택 : Java, Spring</p>
-                <p>공부중인 스택 : Spring boot, ExpressJS</p>
-            </div>
+      <h1>About me</h1>
+      <p>패러그래프</p>
+      <div class="stack">
+        <div>
+          <i class="fa-solid fa-display fa-10x"></i>
+          <h3>Front-end</h3>
+          <p>사용 가능한 스택 : HTML, CSS, JavaScript, TypeScript, React</p>
+          <p>공부중인 스택 : NextJS, Emotion</p>
         </div>
-        <div class="careers">
-            <div class="career">
-                <div class="career__logo"></div>
-                <div class="career__contents">
-                    <span class="content">'빅데이터를 활용한 JAVA개발자 과정' 국비지원 프로그램</span>
-                    <span class="career-year">2022.01 ~ 2022.08</span>
-                </div>
-            </div>
+        <div>
+          <i class="fa-solid fa-server fa-10x"></i>
+          <h3>Back-end</h3>
+          <p>사용 가능한 스택 : Java, Spring, Oracle</p>
+          <p>공부중인 스택 : Spring boot, ExpressJS</p>
         </div>
+      </div>
+      <div class="careers">
+        <div class="career">
+          <div class="career__logo"></div>
+          <div class="career__contents">
+            <span class="content"
+              >'빅데이터를 활용한 JAVA개발자 과정' 국비지원 프로그램</span
+            >
+            <span class="career-year">2022.01 ~ 2022.08</span>
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="Skills"></section>
-</body>
+    <section class="Skills">
+      <h1>Skills</h1>
+      <h2>기술 스택</h2>
+      <p>
+        새로운 것을 두려워하지 않고, 되려 추구하는 편입니다. 프론트엔드 & 백엔드
+        기술을 막론하고 흥미가 생긴다면 무조건 배우고 보는 편입니다. 그 중에서
+        JavaScript는 오랫동안 사용할만한 언어라 생각하여 깊게 공부하고 있습니다.
+      </p>
+      <div class="skillset">
+        <div class="skillset__left">
+          <h3>Skills</h3>
+          <div class="skill">
+            <div class="skill__contents">
+              <span>HTML</span>
+              <span>90%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="skill__value"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill__contents">
+              <span>CSS</span>
+              <span>75%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="skill__value"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill__contents">
+              <span>JavaScript</span>
+              <span>80%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="skill__value"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill__contents">
+              <span>React</span>
+              <span>60%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="skill__value"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill__contents">
+              <span>TypeScript</span>
+              <span>50%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="skill__value"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skillset__right">
+          <h3>Description</h3>
+          <div class="msg"></div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
