@@ -1,11 +1,21 @@
 :root {
   --point-color: #32c259;
+
+  --padding-basic: 24px;
+  --border-radius-basic: 8px;
+
+  --font-size-basic: 24px;
 }
 
 * {
+  box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
+}
+
+body {
+  cursor: default;
 }
 
 ul {
@@ -13,9 +23,10 @@ ul {
 }
 
 .navbar {
-  padding: 24px;
+  padding: var(--padding-basic);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid black;
 }
 
@@ -24,11 +35,10 @@ ul {
   align-items: center;
   text-decoration: none;
   color: var(--point-color);
-  font-size: 24px;
+  font-size: var(--font-size-basic);
 }
 
-.favicon {
-  padding: 8px;
+.logo {
   width: 30px;
   height: 30px;
 }
@@ -39,16 +49,29 @@ ul {
 }
 
 .navbar__menu li {
-  padding-left: 32px;
+  padding: calc(var(--padding-basic) / 2) var(--padding-basic);
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: var(--border-radius-basic);
+}
+
+.navbar__menu li:hover {
+  border: 1px solid var(--point-color);
+  color: var(--point-color);
+}
+
+.navbar__menu li.active {
+  border: 1px solid var(--point-color);
+  color: var(--point-color);
 }
 
 .home {
-  padding: 16px;
+  padding: var(--padding-basic);
   text-align: center;
 }
 
 .home h1 {
-  padding: 16px;
+  padding: var(--padding-basic);
 }
 
 #home__myPic {
