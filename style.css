@@ -219,3 +219,12 @@ align-items: center;
 .contact__links a {
   color: var(--color-basic);
 }
+
+.contact__links a i{
+  transition: all 200ms linear;
+}
+
+.contact__links a i:hover{
+  transform: scale(1.1);
+  color: var(--point-color);
+}
