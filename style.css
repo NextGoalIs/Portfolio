@@ -79,3 +79,63 @@ ul {
   height: 500px;
   border-radius: 50%;
 }
+
+.about{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stack {
+  display: flex;
+  justify-content: space-around;
+}
+
+.stack div {
+  margin: 0 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stack div .i-container {
+  width: 260px;
+  height: 260px;
+  padding: calc(var(--padding-basic) * 2);
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.stack div .i-container i{
+  transition: all 300ms ease;
+}
+
+.stack div .i-container:hover i {
+  transform: rotate(-30deg) scale(1.1);
+  color: var(--point-color);
+}
+
+.stack div h3{
+  padding: var(--padding-basic) 0px;
+}
+
+.stack div p+p{
+  padding-bottom: var(--padding-basic);
+}
+
+.careers {
+  margin-right: auto;
+  padding-left: calc(var(--padding-basic) * 2);
+  display: flex;
+}
+
+.career__contents{
+  display: flex;
+  flex-direction: column;
+}
+
+.career__contents * {
+  padding-left: var(--padding-basic);
+}
