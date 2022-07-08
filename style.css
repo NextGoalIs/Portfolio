@@ -242,3 +242,27 @@ ul {
   transform: scale(1.1);
   color: var(--point-color);
 }
+
+.arrow-up {
+  opacity: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  border-radius: 50%;
+  background-color: var(--point-color);
+  transition: all 250ms ease-in-out;
+}
+
+.arrow-up i {
+  color: white;
+}
+
+.arrow-up.active {
+  opacity: 1;
+  cursor: pointer;
+}
