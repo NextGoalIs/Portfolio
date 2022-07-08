@@ -1,7 +1,7 @@
 :root {
   --point-color: #32c259;
-  --background-color-basic:#DCE2F0;
-  --color-basic: #50586C;
+  --background-color-basic: #dce2f0;
+  --color-basic: #50586c;
 
   --padding-basic: 24px;
   --border-radius-basic: 8px;
@@ -20,12 +20,12 @@ body {
   cursor: default;
 }
 
-section:nth-child(odd){
+section:nth-child(odd) {
   background-color: var(--background-color-basic);
   color: var(--color-basic);
 }
 
-section:nth-child(even){
+section:nth-child(even) {
   background-color: var(--color-basic);
   color: var(--background-color-basic);
 }
@@ -94,7 +94,7 @@ ul {
   border-radius: 50%;
 }
 
-.about{
+.about {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -122,7 +122,7 @@ ul {
   border-radius: 50%;
 }
 
-.stack div .i-container i{
+.stack div .i-container i {
   transition: all 300ms ease;
 }
 
@@ -131,11 +131,11 @@ ul {
   color: var(--point-color);
 }
 
-.stack div h3{
+.stack div h3 {
   padding: var(--padding-basic) 0px;
 }
 
-.stack div p+p{
+.stack div p + p {
   padding-bottom: var(--padding-basic);
 }
 
@@ -150,7 +150,7 @@ ul {
   align-items: center;
 }
 
-.career__contents{
+.career__contents {
   display: flex;
   flex-direction: column;
 }
@@ -163,7 +163,7 @@ ul {
   height: 50px;
 }
 
-.Skills{
+.skills {
   padding-top: var(--padding-basic);
   background-color: blanchedalmond;
   display: flex;
@@ -171,16 +171,16 @@ ul {
   align-items: center;
 }
 
-.Skills h2{
+.skills h2 {
   padding: var(--padding-basic) 0;
 }
 
-.Skills p{
+.skills p {
   width: 60%;
   padding-bottom: var(--padding-basic);
 }
 
-.skillset{
+.skillset {
   display: flex;
   width: 100%;
   padding: var(--padding-basic) calc(var(--padding-basic) * 16);
@@ -189,35 +189,35 @@ ul {
   color: var(--background-color-basic);
 }
 
-.skillset__left{
-width: 50%;
-display: flex;
-flex-direction: column;
-align-items: center;
+.skillset__left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.skill{
+.skill {
   width: 100%;
 }
 
-.skill__contents{
+.skill__contents {
   display: flex;
   justify-content: space-between;
 }
 
-.skill__bar{
+.skill__bar {
   margin: calc(var(--padding-basic) / 2) 0;
   width: 100%;
   height: 3px;
   background-color: gray;
 }
 
-.skill__value{
+.skill__value {
   height: 3px;
   background-color: lightsalmon;
 }
 
-.contact{
+.contact {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -226,7 +226,7 @@ align-items: center;
   color: var(--color-basic);
 }
 
-.contact *{
+.contact * {
   padding: var(--padding-basic) 0 calc(var(--padding-basic) / 2);
 }
 
@@ -234,11 +234,11 @@ align-items: center;
   color: var(--color-basic);
 }
 
-.contact__links a i{
+.contact__links a i {
   transition: all 200ms linear;
 }
 
-.contact__links a i:hover{
+.contact__links a i:hover {
   transform: scale(1.1);
   color: var(--point-color);
 }
