@@ -30,14 +30,18 @@ menus.forEach((menu) => {
 });
 
 //화면 일정 이상 내려갈 시 Up 버튼 생성
-const MIN_HEIGHT_FOR_UP_BTN = 200;
-document.addEventListener("scroll", () => {
-  if (scrollY >= MIN_HEIGHT_FOR_UP_BTN) {
-    arrowUp.classList.add("active");
-  } else {
+const options = {
+  threshold: 0.5,
+};
+
+const observer = new IntersectionObserver((entry) => {
+  if (entry[0].isIntersecting) {
     arrowUp.classList.remove("active");
+  } else {
+    arrowUp.classList.add("active");
   }
-});
+}, options);
+observer.observe(sections[0]);
 
 //Up 버튼 클릭 시 맨 위로
 arrowUp.addEventListener("click", () => {
