@@ -5,21 +5,24 @@ const arrowUp = document.querySelector(".arrow-up");
 let selectedMenu = menus[0];
 let selectedMenuIndex = 0;
 
+//새로고침 시 맨 위로 올 수 있도록 초기화
+setTimeout(moveClientScreen, 1);
+
 function activeMenu(target) {
   menus.forEach((menu) => (menu.classList = ""));
   target.classList = "active";
 }
 
-function moveClientScreen(index) {
-  selectedMenu = menus[index];
+function moveClientScreen() {
+  selectedMenu = menus[selectedMenuIndex];
   activeMenu(selectedMenu);
-  sections[index].scrollIntoView({ behavior: "smooth" });
+  sections[selectedMenuIndex].scrollIntoView({ behavior: "smooth" });
 }
 
 //메뉴 클릭시 화면 이동
 function menuClickHandler(e) {
   selectedMenuIndex = menus.indexOf(e.target);
-  moveClientScreen(selectedMenuIndex);
+  moveClientScreen();
 }
 
 menus.forEach((menu) => {
@@ -39,7 +42,7 @@ document.addEventListener("scroll", () => {
 //Up 버튼 클릭 시 맨 위로
 arrowUp.addEventListener("click", () => {
   selectedMenuIndex = 0;
-  moveClientScreen(selectedMenuIndex);
+  moveClientScreen();
 });
 
 //scroll section to section
@@ -61,7 +64,7 @@ window.addEventListener(
       selectedMenuIndex += 1;
     }
 
-    moveClientScreen(selectedMenuIndex);
+    moveClientScreen();
   },
   { passive: false }
 );
