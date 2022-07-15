@@ -194,8 +194,8 @@ ul {
 }
 
 .skills p {
-  width: 60%;
-  padding-bottom: var(--padding-basic);
+  width: 1000px;
+  padding: calc(var(--padding-basic) / 2) 0;
 }
 
 .skillset {
@@ -208,10 +208,19 @@ ul {
 }
 
 .skillset__left {
-  width: 50%;
+  width: 45%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.skillset__right {
+  width: 35%;
+}
+
+.skillset__right h3 {
+  width: 100%;
+  text-align: center;
 }
 
 .skill {
@@ -233,6 +242,11 @@ ul {
 .skill__value {
   height: 3px;
   background-color: lightsalmon;
+}
+
+.msg p.content {
+  display: block;
+  width: 100%;
 }
 
 .contact {
