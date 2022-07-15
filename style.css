@@ -20,6 +20,10 @@ body {
   cursor: default;
 }
 
+section:not(.contact) {
+  height: 100vh;
+}
+
 section:nth-child(odd) {
   background-color: var(--background-color-basic);
   color: var(--color-basic);
