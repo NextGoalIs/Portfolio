@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>박진교</title>
     <link rel="icon" href="imgs/favicon.png" type="image/png" />
     <meta name="author" content="PARK JIN KYO" />
     <script
@@ -36,10 +36,16 @@
       <img src="imgs/myPic.jpg" alt="myPicture" id="home__myPic" />
       <h1>박진교</h1>
       <h3>신입 프론트엔드 개발자</h3>
+      <p>스크롤 또는 오른쪽 위의 메뉴를 클릭해 이동해보세요.</p>
     </section>
     <section class="about">
       <h1>About me</h1>
-      <p>패러그래프</p>
+      <p class="content">
+        새로운 것을 두려워하지 않고, 되려 추구하는 편입니다. 현재 타입스크립트와
+        사랑에 빠져 있으며, 타입스크립트로 풀 스택 개발을 하는 것이 현재
+        목표입니다. 일로써 코딩을 해본적은 없지만, 아직까지는 코딩이 매우
+        즐겁습니다.
+      </p>
       <div class="stack">
         <div>
           <div class="i-container">
@@ -59,6 +65,7 @@
         </div>
       </div>
       <div class="careers">
+        <h3>경력 및 활동</h3>
         <div class="career">
           <div class="career__logo">
             <img src="./imgs/emblem_mark01_big.gif" alt="bknu_logo" />
@@ -76,15 +83,16 @@
       <h1>Skills</h1>
       <h2>기술 스택</h2>
       <p>
-        새로운 것을 두려워하지 않고, 되려 추구하는 편입니다. 프론트엔드 & 백엔드
-        기술을 막론하고 흥미가 생긴다면 무조건 배우고 보는 편입니다. 그 중에서
-        JavaScript는 오랫동안 사용할만한 언어라 생각하여 깊게 공부하고 있습니다.
+        프론트엔드 & 백엔드 기술을 막론하고 흥미가 생긴다면 무조건 배우고 보는
+        편입니다. 그 중에서 JavaScript를 깊게 공부하던 중, 타입의 중요성과
+        편리성을 보고 난 후 TypeScript를 주로 이용하고 있습니다.
       </p>
+      <p>각 skill을 클릭하시면 자세한 설명을 보실 수 있습니다.</p>
       <div class="skillset">
         <div class="skillset__left">
           <h3>Skills</h3>
           <div class="skill">
-            <div class="skill__contents">
+            <div class="skill__contents" id="HTML">
               <span>HTML</span>
               <span>90%</span>
             </div>
@@ -93,7 +101,7 @@
             </div>
           </div>
           <div class="skill">
-            <div class="skill__contents">
+            <div class="skill__contents" id="CSS">
               <span>CSS</span>
               <span>75%</span>
             </div>
@@ -102,7 +110,7 @@
             </div>
           </div>
           <div class="skill">
-            <div class="skill__contents">
+            <div class="skill__contents" id="JavaScript">
               <span>JavaScript</span>
               <span>80%</span>
             </div>
@@ -111,7 +119,7 @@
             </div>
           </div>
           <div class="skill">
-            <div class="skill__contents">
+            <div class="skill__contents" id="React">
               <span>React</span>
               <span>60%</span>
             </div>
@@ -120,7 +128,7 @@
             </div>
           </div>
           <div class="skill">
-            <div class="skill__contents">
+            <div class="skill__contents" id="TypeScript">
               <span>TypeScript</span>
               <span>50%</span>
             </div>

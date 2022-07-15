@@ -4,7 +4,7 @@
   --color-basic: #50586c;
 
   --padding-basic: 24px;
-  --padding-top-basic: 160px;
+  --section-padding-top: 160px;
   --border-radius-basic: 8px;
 
   --font-size-basic: 24px;
@@ -22,9 +22,14 @@ body {
   overflow-y: hidden;
 }
 
+p.content {
+  max-width: 1000px;
+  padding: calc(var(--padding-basic) / 2) 0;
+}
+
 section:not(.contact) {
   height: 100vh;
-  padding-top: var(--padding-top-basic);
+  padding-top: var(--section-padding-top);
 }
 
 section:nth-child(odd) {
@@ -97,14 +102,16 @@ ul {
 
 #home__myPic {
   width: 350px;
-  height: 500px;
   border-radius: 50%;
+}
+
+.home p {
+  padding: calc(var(--padding-basic) / 2) 0;
 }
 
 .about {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -150,6 +157,11 @@ ul {
   margin-right: auto;
   padding-left: calc(var(--padding-basic) * 2);
   display: flex;
+  flex-direction: column;
+}
+
+.careers h3 {
+  padding-bottom: var(--padding-basic);
 }
 
 .career {
@@ -171,7 +183,6 @@ ul {
 }
 
 .skills {
-  padding-top: var(--padding-basic);
   background-color: blanchedalmond;
   display: flex;
   flex-direction: column;
