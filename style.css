@@ -4,6 +4,7 @@
   --color-basic: #50586c;
 
   --padding-basic: 24px;
+  --padding-top-basic: 160px;
   --border-radius-basic: 8px;
 
   --font-size-basic: 24px;
@@ -18,10 +19,12 @@
 
 body {
   cursor: default;
+  overflow-y: hidden;
 }
 
 section:not(.contact) {
   height: 100vh;
+  padding-top: var(--padding-top-basic);
 }
 
 section:nth-child(odd) {

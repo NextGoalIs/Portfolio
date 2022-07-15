@@ -2,18 +2,24 @@ const menus = Array.from(document.querySelectorAll(".navbar__menu li"));
 const sections = Array.from(document.querySelectorAll("section"));
 const arrowUp = document.querySelector(".arrow-up");
 
-//메뉴 클릭시 화면 이동
-const NAVBAR__HEIGHT = 99;
+let selectedMenu = menus[0];
+let selectedMenuIndex = 0;
 
-function menuClickHandler(e) {
+function activeMenu(target) {
   menus.forEach((menu) => (menu.classList = ""));
-  e.target.classList = "active";
-  scrollTo({
-    top:
-      sections.find((sec) => sec.className.includes(e.target.id)).offsetTop -
-      NAVBAR__HEIGHT,
-    behavior: "smooth",
-  });
+  target.classList = "active";
+}
+
+function moveClientScreen(index) {
+  selectedMenu = menus[index];
+  activeMenu(selectedMenu);
+  sections[index].scrollIntoView({ behavior: "smooth" });
+}
+
+//메뉴 클릭시 화면 이동
+function menuClickHandler(e) {
+  selectedMenuIndex = menus.indexOf(e.target);
+  moveClientScreen(selectedMenuIndex);
 }
 
 menus.forEach((menu) => {
@@ -21,8 +27,9 @@ menus.forEach((menu) => {
 });
 
 //화면 일정 이상 내려갈 시 Up 버튼 생성
+const MIN_HEIGHT_FOR_UP_BTN = 200;
 document.addEventListener("scroll", () => {
-  if (scrollY >= NAVBAR__HEIGHT * 2) {
+  if (scrollY >= MIN_HEIGHT_FOR_UP_BTN) {
     arrowUp.classList.add("active");
   } else {
     arrowUp.classList.remove("active");
@@ -31,43 +38,30 @@ document.addEventListener("scroll", () => {
 
 //Up 버튼 클릭 시 맨 위로
 arrowUp.addEventListener("click", () => {
-  scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
+  selectedMenuIndex = 0;
+  moveClientScreen(selectedMenuIndex);
 });
 
-//IntersectionObserver를 이용한, 스크롤 시 메뉴 active 전환
-//잠시 보류!!!
+//scroll section to section
 
-// let selectedMenu = menus[0];
-// selectedMenu.classList = "active";
+window.addEventListener(
+  "mousewheel",
+  (event) => {
+    event.preventDefault();
+    let moveTop = 0;
+    //휠 위로 올릴 때
+    if (event.deltaY < 0) {
+      if (selectedMenuIndex === 0) return;
 
-// const observerCallback = (entries) => {
-//   menus.forEach((menu) => (menu.classList = ""));
-//   entries.forEach((entry) => {
-//     if (!entry.isIntersecting && entry.intersectionRatio > 0) {
-//       console.log(entry);
-//       const index = sections.indexOf(entry.target);
-//       let selectedIndex;
-//       console.log(entry.target);
-//       if (entry.boundingClientRect.y < 0) {
-//         selectedIndex = index - 1;
-//       } else {
-//         selectedIndex = index + 1;
-//       }
-//       menus[selectedIndex].classList = "active";
-//       return false;
-//     }
-//   });
-// };
+      selectedMenuIndex -= 1;
+    } else {
+      // 휠 아래로 내릴 때
+      if (selectedMenuIndex === menus.length - 1) return;
 
-// const observerOptions = {
-//   root: null,
-//   rootMargin: "0px",
-//   threshold: 0.1,
-// };
+      selectedMenuIndex += 1;
+    }
 
-// const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-// sections.forEach((sec) => observer.observe(sec));
+    moveClientScreen(selectedMenuIndex);
+  },
+  { passive: false }
+);
